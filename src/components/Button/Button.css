@@ -1,0 +1,28 @@
+.app-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Norms Tochka Extended', sans-serif;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease;
+}
+
+.app-button:active {
+  transform: scale(0.98);
+}
+
+.app-button.primary {
+  background-color: #7f42e1;
+  color: white;
+  font-size: 117px;
+  font-weight: 600;
+}
+
+.app-button.secondary {
+  background-color: white;
+  color: #7f42e1;
+  font-size: 80px;
+  font-weight: 600;
+}

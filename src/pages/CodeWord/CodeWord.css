@@ -1,0 +1,46 @@
+.code-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-word {
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  font-size: 650px;
+  line-height: 1;
+  color: #7f42e1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.code-badge {
+  height: 216px;
+  width: 900px;
+  position: absolute;
+  right: -250px;
+  bottom: -100px;
+  background: #fff;
+  border-radius: 100px;
+  transform: rotate(-15deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-badge-text {
+  font-family: 'TT Norms Tochka Extended', sans-serif;
+  font-size: 117px;
+  line-height: 1;
+  color: #7f42e1;
+  font-weight: bold;
+  white-space: nowrap;
+}

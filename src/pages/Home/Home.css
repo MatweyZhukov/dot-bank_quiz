@@ -1,0 +1,37 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 186px;
+  width: 966px;
+  height: 127px;
+}
+
+.sub-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sub-image {
+  height: auto;
+}
+
+.tebe {
+  height: 608px;
+  position: relative;
+  z-index: 1;
+}
+
+.reshat {
+  width: 2973px;
+  margin-top: -150px;
+  position: relative;
+  z-index: 2;
+}

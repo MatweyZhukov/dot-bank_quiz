@@ -1,0 +1,34 @@
+.over-wrapper {
+  min-height: 100vh;
+  background: #7f42e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 200px;
+}
+
+.over-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.over-title {
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  font-size: 700px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.over-subtitle {
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  font-size: 350px;
+  color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 241px 0 0 0;
+  line-height: 1;
+}

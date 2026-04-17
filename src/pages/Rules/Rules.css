@@ -1,0 +1,75 @@
+.rules {
+  overflow: hidden;
+  padding: 0 200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+
+.rules-title {
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  font-size: 400px;
+  color: #7f42e1;
+  text-transform: uppercase;
+  margin-bottom: 82px;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.rules-card {
+  width: 100%;
+  padding: 91px;
+  min-height: 1051px;
+  margin-bottom: 71px;
+  background: white;
+  border-radius: 60px;
+  box-sizing: border-box;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;
+  row-gap: 91px;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  font-family: 'TT Norms Tochka Extended', sans-serif;
+  font-size: 75px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.rule-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 7px solid #7f42e1;
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.rules-actions {
+  gap: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-coins {
+  position: absolute;
+  width: 2687.77px;
+  height: 1660.68px;
+  bottom: -100px;
+  right: 0;
+  pointer-events: none;
+  transform: scale(0.75);
+  transform-origin: bottom right;
+}
