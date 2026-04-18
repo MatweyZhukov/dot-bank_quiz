@@ -20,7 +20,7 @@ export const dataVariant2: Question[] = [
         right={<img src={digging} alt="" />}
       />
     ),
-    correctAnswers: ['медиана'],
+    correctAnswers: ['медиана', 'Медиана'],
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ export const dataVariant2: Question[] = [
         }
       />
     ),
-    correctAnswers: ['градиент', 'gradient'],
+    correctAnswers: ['БЕРТ/BERT', 'Берт', 'берт', 'bert'],
   },
   {
     id: 3,
@@ -94,6 +94,7 @@ export const dataVariant2: Question[] = [
       'поправка Банферрони',
       'метод Бонферрони',
       'метод Бонферони',
+      'Поправка Бонферрони',
     ],
   },
   {
@@ -104,13 +105,13 @@ export const dataVariant2: Question[] = [
         right={<img src={manmem} alt="" />}
       />
     ),
-    correctAnswers: ['вероятности', 'вероятность', 'probability'],
+    correctAnswers: ['вероятности', 'вероятность', 'probability', 'Вероятность'],
   },
   {
     id: 5,
     component: (
       <MonoQuestion content="По мнению Ферми, высказанному еще в 1950-е, главной проблемой физики конца XX века будет решение нелинейных задач. Ибо в Библии не сказано, что фундаментальные законы физики должны быть... Продолжи фразу одним словом." />
     ),
-    correctAnswers: ['линейный', 'линейным'],
+    correctAnswers: ['линейный', 'линейным', 'Линейными'],
   },
 ];

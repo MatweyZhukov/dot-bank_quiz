@@ -26,6 +26,10 @@
   text-align: center;
 }
 
+.mono-content > * {
+  font-family: 'TT Norms Tochka Extended', sans-serif;
+}
+
 .mono-content img {
   max-width: 100%;
   max-height: 100%;

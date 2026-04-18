@@ -7,14 +7,14 @@ export const productVariant1: Question[] = [
     component: (
       <MonoQuestion content="Статичный макет, который показывает визуальный дизайн, но не кликается — это не прототип и не вайрфрейм, а ___?" />
     ),
-    correctAnswers: ['mock up', 'mockup', 'мок ап', 'макет', 'mock-up'],
+    correctAnswers: ['mock up', 'mockup', 'мок ап', 'макет', 'mock-up', 'Мокап'],
   },
   {
     id: 2,
     component: (
       <MonoQuestion content="Человек в компании, который продвигает продукт или технологию с миссионерским энтузиазмом." />
     ),
-    correctAnswers: ['евенгелист'],
+    correctAnswers: ['евенгелист', 'Евангелист '],
   },
   {
     id: 3,
@@ -22,6 +22,7 @@ export const productVariant1: Question[] = [
       <MonoQuestion content="Датчанин, соавтор термина «discount usability engineering», 10 правил  юзабилити кого? Напиши фамилию." />
     ),
     correctAnswers: [
+      'Нильсен',
       'Нильсон',
       'Нильсен',
       'Nielsen',
@@ -37,7 +38,7 @@ export const productVariant1: Question[] = [
     component: (
       <MonoQuestion content="Когнитивное искажение: пользователь видит «Было 9 990 ₽, стало 4 990 ₽» и воспринимает цену как выгодную. Как называется этот эффект?" />
     ),
-    correctAnswers: ['якорение', 'anchoring', 'эффект якоря'],
+    correctAnswers: ['якорение', 'anchoring', 'эффект якоря', 'Якорение'],
   },
   {
     id: 5,

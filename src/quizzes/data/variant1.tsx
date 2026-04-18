@@ -20,6 +20,8 @@ export const dataVariant1: Question[] = [
       />
     ),
     correctAnswers: [
+      'мл',
+      'Машинное обучение',
       'машиное обучение',
       'ML',
       'ml',
@@ -40,7 +42,7 @@ export const dataVariant1: Question[] = [
         right={<img src={pleasantmem} alt="" />}
       />
     ),
-    correctAnswers: ['градиент', 'gradient'],
+    correctAnswers: ['градиент', 'gradient', 'Градиент'],
   },
   {
     id: 3,
@@ -50,7 +52,7 @@ export const dataVariant1: Question[] = [
         right={<img src={formula} alt="" />}
       />
     ),
-    correctAnswers: ['энтропия', 'entropy'],
+    correctAnswers: ['энтропия', 'entropy', 'Энтропия', 'энтропии'],
   },
   {
     id: 4,
@@ -64,7 +66,13 @@ export const dataVariant1: Question[] = [
         right={<img src={dots} alt="" />}
       />
     ),
-    correctAnswers: ['энтропия', 'entropy'],
+    correctAnswers: [
+      'Диаграмма рассеяния',
+      'диаграмма рассеяния',
+      'диаграма рассеяния',
+      'диаграма расеяния',
+      'график рассеяния',
+    ],
   },
   {
     id: 5,
@@ -78,6 +86,6 @@ export const dataVariant1: Question[] = [
         right={<img src={historyman} alt="" />}
       />
     ),
-    correctAnswers: ['Баес', 'Байс', 'Баэс', 'Баэз', 'байэз', 'Баез', 'Байез'],
+    correctAnswers: ['Баес', 'Байс', 'Баэс', 'Баэз', 'байэз', 'Баез', 'Байез', 'Байес'],
   },
 ];
