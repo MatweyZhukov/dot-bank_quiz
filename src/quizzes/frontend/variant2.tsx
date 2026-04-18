@@ -45,6 +45,7 @@ export const frontendVariant2: Question[] = [
       />
     ),
     correctAnswers: [
+      'Метод',
       'методом',
       'Методом',
       'метод',
@@ -62,7 +63,7 @@ export const frontendVariant2: Question[] = [
     component: (
       <MonoQuestion content="JavaScript является однопоточным языком программирования. Если бы не этот механизм, то любая операция блокировала бы поток исполнения скрипта. Назови ЕГО на английском языке." />
     ),
-    correctAnswers: ['event Loop', 'ивент луп', 'эвент луп'],
+    correctAnswers: ['Event loop', 'event Loop', 'ивент луп', 'эвент луп'],
   },
   {
     id: 3,
@@ -76,7 +77,7 @@ export const frontendVariant2: Question[] = [
         right={<img src={schema} alt="" />}
       />
     ),
-    correctAnswers: ['граница', 'Границы', 'границы'],
+    correctAnswers: ['Граница', 'граница', 'Границы', 'границы'],
   },
   {
     id: 4,
@@ -97,6 +98,12 @@ export const frontendVariant2: Question[] = [
         right={<img src={boys} alt="" />}
       />
     ),
-    correctAnswers: ['use strict / strict mode', 'строгий режим js', 'режим strict', 'js'],
+    correctAnswers: [
+      'Строгий режим (use strict / strict mode)',
+      'use strict / strict mode',
+      'строгий режим js',
+      'режим strict',
+      'js',
+    ],
   },
 ];

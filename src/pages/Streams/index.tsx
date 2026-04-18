@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { useEffect, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import stream from '../../assets/stream.svg';
 import Button from '../../components/Button';
@@ -6,6 +6,14 @@ import './Streams.css';
 
 const Streams: FC = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/');
+    }, 15000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="streams">

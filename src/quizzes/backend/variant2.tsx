@@ -34,6 +34,7 @@ export const backendVariant2: Question[] = [
       'многопоток',
       'multithreding',
       'мультитрединг',
+      'Многопоточность',
     ],
   },
   {
@@ -41,24 +42,24 @@ export const backendVariant2: Question[] = [
     component: (
       <MonoQuestion content="Может жить на засыпающем ноутбуке под кроватью, на Mac Mini, на виртуалке или в облаке. На них запускают Telegram-ботов, Minecraft и продакшен на 10 миллионов пользователей. Слушает порт и отвечает. Что это?" />
     ),
-    correctAnswers: ['сервер', 'серверы', 'Серверы', 'server', 'Server', 'web server'],
+    correctAnswers: ['сервер', 'серверы', 'Серверы', 'server', 'Server', 'web server', 'Сервер'],
   },
   {
     id: 3,
     component: (
       <MonoQuestion content="Это стоит перед вашими сервисами. Раздаёт запросы, отдаёт статику, терминирует SSL. Его конфиг — это location, upstream и proxy_pass. Что это?" />
     ),
-    correctAnswers: ['nginx', 'ngnix', 'нгинкс', 'нжинкс'],
+    correctAnswers: ['nginx', 'ngnix', 'нгинкс', 'нжинкс', 'Nginx'],
   },
   {
     id: 4,
     component: (
       <SplitQuestion
-        left={<div style={{ fontSize: '120px', width: '100%' }}>Чего не хватило поду? </div>}
+        left={<div style={{ fontSize: '120px', width: '100%' }}>Чего не хватило поду?</div>}
         right={<img src={memory} alt="" />}
       />
     ),
-    correctAnswers: ['память', 'Памяти', 'памяти'],
+    correctAnswers: ['Память', 'память', 'Памяти', 'памяти'],
   },
   {
     id: 5,
@@ -85,6 +86,7 @@ export const backendVariant2: Question[] = [
       />
     ),
     correctAnswers: [
+      'API Gateway (Гейтвей)',
       'апи гетевей',
       'апи гетевэй',
       'апи гетэвэй',
