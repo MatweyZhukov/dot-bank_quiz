@@ -111,7 +111,9 @@ export const frontendVariant1: Question[] = [
       'режим strict',
       'js',
       'strict mode',
+      'strict mode',
       'строгий режим',
+      'use strict',
     ],
   },
 ];
