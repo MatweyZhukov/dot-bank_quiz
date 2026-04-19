@@ -11,11 +11,8 @@ export const dataVariant1: Question[] = [
     id: 1,
     component: (
       <SplitQuestion
-        left={
-          <div style={{ fontSize: '120px', width: '100%' }}>
-            О чём идет речь на картинке? Ответ из двух слов.
-          </div>
-        }
+        rightImage
+        left={<p>О чём идет речь на картинке? Ответ из двух слов.</p>}
         right={<img src={computers} alt="" />}
       />
     ),
@@ -34,10 +31,12 @@ export const dataVariant1: Question[] = [
     id: 2,
     component: (
       <SplitQuestion
+        rightImage
         left={
-          <div style={{ fontSize: '120px', width: '100%' }}>
-            Напиши на русском слово, которое мы закрыли на меме.
-          </div>
+          <p style={{ fontSize: '85px' }}>
+            Напиши на русском слово, которое
+            <br /> мы закрыли на меме.
+          </p>
         }
         right={<img src={pleasantmem} alt="" />}
       />
@@ -48,7 +47,8 @@ export const dataVariant1: Question[] = [
     id: 3,
     component: (
       <SplitQuestion
-        left={<div style={{ fontSize: '120px', width: '100%' }}>Выражение для… ?</div>}
+        rightImage
+        left={<p>Выражение для… ?</p>}
         right={<img src={formula} alt="" />}
       />
     ),
@@ -58,11 +58,8 @@ export const dataVariant1: Question[] = [
     id: 4,
     component: (
       <SplitQuestion
-        left={
-          <div style={{ fontSize: '120px', width: '100%' }}>
-            Импортозамещенное название для Scatterplot.
-          </div>
-        }
+        rightImage
+        left={<p>Импортозамещенное название для Scatterplot.</p>}
         right={<img src={dots} alt="" />}
       />
     ),
@@ -78,14 +75,16 @@ export const dataVariant1: Question[] = [
     id: 5,
     component: (
       <SplitQuestion
+        rightImage
         left={
-          <div style={{ fontSize: '120px', width: '100%' }}>
-            Назови фамилию этого совсем не наивного мужчины.
-          </div>
+          <p>
+            Назови фамилию этого совсем
+            <br /> не наивного мужчины.
+          </p>
         }
         right={<img src={historyman} alt="" />}
       />
     ),
-    correctAnswers: ['Баес', 'Байс', 'Баэс', 'Баэз', 'байэз', 'Баез', 'Байез', 'Байес'],
+    correctAnswers: ['Баес', 'Байс', 'Баэс', 'Баэз', 'байэз', 'Баез', 'Байез', 'Байес', 'Байз'],
   },
 ];
