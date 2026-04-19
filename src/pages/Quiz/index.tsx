@@ -88,11 +88,10 @@ const Quiz: FC = () => {
   };
 
   useEffect(() => {
+    return;
     if (!quizVariant || screen !== 'question') return;
 
-    if (!localStorage.getItem(TIMER_KEY!)) {
-      createTimer(TIMER_KEY);
-    }
+    if (!localStorage.getItem(TIMER_KEY!)) createTimer(TIMER_KEY);
 
     const interval = setInterval(() => {
       const remaining = getRemaining(TIMER_KEY);

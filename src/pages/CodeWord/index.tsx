@@ -25,35 +25,38 @@ const CodeWord: FC = () => {
       localStorage.removeItem(`quiz-question-index-${stream}`);
     }
 
-    const showWordTimer = setTimeout(() => {
+    const showTimer = setTimeout(() => {
       setShowFullWord(true);
     }, 3000);
+
+    return () => clearTimeout(showTimer);
+  }, [stream]);
+
+  useEffect(() => {
+    if (!showFullWord) return;
 
     const finalTimer = setTimeout(() => {
       navigate('/final');
     }, 10000);
 
-    return () => {
-      clearTimeout(showWordTimer);
-      clearTimeout(finalTimer);
-    };
-  }, [navigate, stream]);
+    return () => clearTimeout(finalTimer);
+  }, [showFullWord, navigate]);
 
   return (
     <div className="code-wrapper">
       <div className="code-inner">
-        {!showFullWord ? (
-          <h1 className="code-word">{maskedWord}</h1>
-        ) : (
-          <>
-            <h1 className="code-word">МЕНЯЙ</h1>
+        <h1 className={`code-word code-word--masked ${showFullWord ? 'fade-out' : 'fade-in'}`}>
+          {maskedWord}
+        </h1>
 
-            {correctCount === 5 && (
-              <div className="code-badge success">
-                <span className="code-badge-text">Идеально!</span>
-              </div>
-            )}
-          </>
+        <h1 className={`code-word code-word--full ${showFullWord ? 'fade-in' : 'fade-out'}`}>
+          МЕНЯЙ
+        </h1>
+
+        {correctCount === 5 && (
+          <div className={`code-badge ${showFullWord ? 'code-badge--visible' : ''}`}>
+            <span className="code-badge-text">Идеально!</span>
+          </div>
         )}
       </div>
     </div>

@@ -11,11 +11,16 @@ export const dataVariant2: Question[] = [
     id: 1,
     component: (
       <SplitQuestion
+        paddingRight="93px"
+        rightImage
         left={
-          <div style={{ fontSize: '100px', width: '100%' }}>
-            На знаке часть лопаты совпадает с ней. Слово «она» этимологически связано с названием
-            специалиста, помогающего, например, справедливо разделить имущество. Назовите её.
-          </div>
+          <p style={{ fontSize: '88px' }}>
+            На знаке часть лопаты совпадает
+            <br /> с ней. Слово «она» этимологически связано с названием специалиста, помогающего,
+            например, справедливо разделить имущество.
+            <br />
+            <br /> Назовите её.
+          </p>
         }
         right={<img src={digging} alt="" />}
       />
@@ -26,11 +31,18 @@ export const dataVariant2: Question[] = [
     id: 2,
     component: (
       <SplitQuestion
-        left={
-          <div style={{ fontSize: '120px', width: '100%' }}>Название какой модели закрыли?</div>
-        }
+        rightImage
+        left={<p>Название какой модели закрыли?</p>}
         right={
-          <div style={{ position: 'relative', width: '100%' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'end',
+              position: 'relative',
+              width: '100%',
+              backgroundColor: '#dedd11',
+            }}
+          >
             <img
               src={google}
               alt=""
@@ -43,11 +55,11 @@ export const dataVariant2: Question[] = [
             <div
               style={{
                 position: 'absolute',
-                width: '808px',
+                width: '850px',
                 height: '269px',
                 background: '#7f42e1',
-                top: '60%',
-                left: '420px',
+                top: '67%',
+                left: '470px',
                 transform: 'translate(-50%, -50%)',
                 borderRadius: '40px',
               }}
@@ -61,31 +73,11 @@ export const dataVariant2: Question[] = [
   {
     id: 3,
     component: (
-      <MonoQuestion
-        content={
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '60px',
-              textAlign: 'center',
-            }}
-          >
-            <div style={{ fontSize: '90px', maxWidth: '90%' }}>
-              На картинке часть описания метода. Как он называется?
-            </div>
-
-            <img
-              src={method}
-              alt=""
-              style={{
-                width: '3440px',
-                objectFit: 'cover',
-              }}
-            />
-          </div>
-        }
+      <SplitQuestion
+        rightImage
+        direction="vertical"
+        left={<p>На картинке часть описания метода. Как он называется?</p>}
+        right={<img src={method} alt="" style={{ width: '3440px', objectFit: 'cover' }} />}
       />
     ),
     correctAnswers: [
@@ -95,13 +87,15 @@ export const dataVariant2: Question[] = [
       'метод Бонферрони',
       'метод Бонферони',
       'Поправка Бонферрони',
+      'метод Банферони',
     ],
   },
   {
     id: 4,
     component: (
       <SplitQuestion
-        left={<div style={{ fontSize: '120px', width: '100%' }}>О чём говорит этот мужчина?</div>}
+        rightImage
+        left={<p>О чём говорит этот мужчина?</p>}
         right={<img src={manmem} alt="" />}
       />
     ),
@@ -110,7 +104,18 @@ export const dataVariant2: Question[] = [
   {
     id: 5,
     component: (
-      <MonoQuestion content="По мнению Ферми, высказанному еще в 1950-е, главной проблемой физики конца XX века будет решение нелинейных задач. Ибо в Библии не сказано, что фундаментальные законы физики должны быть... Продолжи фразу одним словом." />
+      <MonoQuestion
+        content={
+          <>
+            По мнению Ферми, высказанному еще в 1950-е, главной проблемой физики конца XX века будет
+            решение нелинейных задач. Ибо в Библии не сказано, что фундаментальные законы физики
+            должны быть...
+            <br />
+            <br />
+            Продолжи фразу одним словом.
+          </>
+        }
+      />
     ),
     correctAnswers: ['линейный', 'линейным', 'Линейными'],
   },

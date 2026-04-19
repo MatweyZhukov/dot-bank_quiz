@@ -9,7 +9,8 @@ export const backendVariant1: Question[] = [
     id: 1,
     component: (
       <SplitQuestion
-        left={<div style={{ fontSize: '140px', width: '100%' }}>👀 + 📊 + 🚨 = ?</div>}
+        rightImage
+        left={<p style={{ fontSize: '190px' }}>👀 + 📊 + 🚨 = ?</p>}
         right={<img src={deer} alt="" />}
       />
     ),
@@ -38,14 +39,34 @@ export const backendVariant1: Question[] = [
   {
     id: 3,
     component: (
-      <MonoQuestion content="Первая, вторая, третья форма... Я разбиваю одну толстую таблицу на несколько связанных, чтобы убить дублирование. Что за процесс?" />
+      <MonoQuestion
+        content={
+          <>
+            Первая, вторая, третья форма...
+            <br /> Я разбиваю одну толстую таблицу на несколько связанных,
+            <br /> чтобы убить дублирование.
+            <br />
+            <br /> Что за процесс?
+          </>
+        }
+      />
     ),
     correctAnswers: ['нормализация', 'normalization', 'Нормализация'],
   },
   {
     id: 4,
     component: (
-      <MonoQuestion content="Отступы — его пунктуация. Табы — его враг. Один лишний пробел — и ничего не работает. Docker-compose и Kubernetes без этого не живут. Что это?" />
+      <MonoQuestion
+        content={
+          <>
+            Отступы — его пунктуация. Табы — его враг.
+            <br /> Один лишний пробел — и ничего не работает.
+            <br /> Docker-compose и Kubernetes без этого не живут.
+            <br />
+            <br /> Что это?
+          </>
+        }
+      />
     ),
     correctAnswers: ['YAML', 'yaml', 'Y A M L', 'y a m l', 'Y a m l', 'YML', 'yamal', 'ямл'],
   },
@@ -58,18 +79,14 @@ export const backendVariant1: Question[] = [
             style={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
               gap: '60px',
-              textAlign: 'center',
             }}
           >
-            <div style={{ fontSize: '120px', lineHeight: 1 }}>
-              📡 → 🖥 → 🖥 → 🖥 → 🖥 🔍👣👣👣👣
-            </div>
+            <p style={{ fontSize: '170px' }}>📡 → 🖥 → 🖥 → 🖥 → 🖥 🔍👣👣👣👣</p>
 
-            <div style={{ fontSize: '90px', lineHeight: 1.2 }}>
+            <p style={{ fontSize: '90px', lineHeight: 1.2 }}>
               Следить за путём запроса через цепочку сервисов — это…
-            </div>
+            </p>
           </div>
         }
       />

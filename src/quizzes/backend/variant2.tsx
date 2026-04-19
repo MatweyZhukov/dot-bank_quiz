@@ -13,16 +13,17 @@ export const backendVariant2: Question[] = [
             style={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
               gap: '60px',
-              textAlign: 'center',
             }}
           >
-            <div style={{ fontSize: '120px', lineHeight: 1 }}>🧵🧵🧵🧵 → 🔒 → 💥</div>
+            <p style={{ fontSize: '180px', textAlign: 'left', width: '100%' }}>
+              🧵🧵🧵🧵 → 🔒 → 💥
+            </p>
 
-            <div style={{ fontSize: '90px', lineHeight: 1.2 }}>
-              Четыре нити, один замок, проблема. Но сам подход называется...
-            </div>
+            <p style={{ fontSize: '90px', lineHeight: 1.2, textAlign: 'left' }}>
+              Четыре нити, один замок, проблема.
+              <br /> Но сам подход называется...
+            </p>
           </div>
         }
       />
@@ -40,14 +41,33 @@ export const backendVariant2: Question[] = [
   {
     id: 2,
     component: (
-      <MonoQuestion content="Может жить на засыпающем ноутбуке под кроватью, на Mac Mini, на виртуалке или в облаке. На них запускают Telegram-ботов, Minecraft и продакшен на 10 миллионов пользователей. Слушает порт и отвечает. Что это?" />
+      <MonoQuestion
+        content={
+          <>
+            Может жить на засыпающем ноутбуке под кроватью, на Mac Mini,
+            <br /> на виртуалке или в облаке. На них запускают Telegram-ботов, Minecraft
+            <br /> и продакшен на 10 миллионов пользователей. Слушает порт и отвечает.
+            <br />
+            <br /> Что это?
+          </>
+        }
+      />
     ),
     correctAnswers: ['сервер', 'серверы', 'Серверы', 'server', 'Server', 'web server', 'Сервер'],
   },
   {
     id: 3,
     component: (
-      <MonoQuestion content="Это стоит перед вашими сервисами. Раздаёт запросы, отдаёт статику, терминирует SSL. Его конфиг — это location, upstream и proxy_pass. Что это?" />
+      <MonoQuestion
+        content={
+          <>
+            Это стоит перед вашими сервисами. Раздаёт запросы, отдаёт статику, терминирует SSL. Его
+            конфиг — это location, upstream и proxy_pass.
+            <br />
+            <br /> Что это?
+          </>
+        }
+      />
     ),
     correctAnswers: ['nginx', 'ngnix', 'нгинкс', 'нжинкс', 'Nginx'],
   },
@@ -55,7 +75,8 @@ export const backendVariant2: Question[] = [
     id: 4,
     component: (
       <SplitQuestion
-        left={<div style={{ fontSize: '120px', width: '100%' }}>Чего не хватило поду?</div>}
+        rightImage
+        left={<p>Чего не хватило поду?</p>}
         right={<img src={memory} alt="" />}
       />
     ),
@@ -68,19 +89,17 @@ export const backendVariant2: Question[] = [
         content={
           <div
             style={{
+              gap: '60px',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              gap: '60px',
-              textAlign: 'center',
             }}
           >
-            <div style={{ fontSize: '120px', lineHeight: 1 }}>🌍 → 🚪 → 🖥🖥🖥🖥</div>
+            <p style={{ fontSize: '180px', lineHeight: 1 }}>🌍 → 🚪 → 🖥🖥🖥🖥</p>
 
-            <div style={{ fontSize: '90px', lineHeight: 1.2 }}>
-              Весь внешний трафик входит в одну дверь, а за ней — десяток сервисов. Эта дверь
-              называется…
-            </div>
+            <p style={{ fontSize: '90px', lineHeight: 1.2 }}>
+              Весь внешний трафик входит в одну дверь, а за ней — десяток сервисов.
+              <br /> Эта дверь называется…
+            </p>
           </div>
         }
       />

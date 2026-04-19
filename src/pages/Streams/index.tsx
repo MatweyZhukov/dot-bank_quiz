@@ -13,10 +13,20 @@ const Streams: FC = () => {
     }, 15000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="streams">
+      <Button
+        className="streams-rules-btn"
+        width="auto"
+        height="auto"
+        borderRadius="100px"
+        onClick={() => navigate('/rules')}
+      >
+        Вернуться к правилам
+      </Button>
+
       <h1 className="streams-title">ВЫБЕРИ СТРИМ</h1>
 
       <div className="streams-grid">

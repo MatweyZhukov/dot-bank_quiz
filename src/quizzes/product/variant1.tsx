@@ -19,7 +19,16 @@ export const productVariant1: Question[] = [
   {
     id: 3,
     component: (
-      <MonoQuestion content="Датчанин, соавтор термина «discount usability engineering», 10 правил  юзабилити кого? Напиши фамилию." />
+      <MonoQuestion
+        content={
+          <>
+            Датчанин, соавтор термина «discount usability engineering»,
+            <br /> 10 правил юзабилити кого?
+            <br />
+            <br /> Напиши фамилию.
+          </>
+        }
+      />
     ),
     correctAnswers: [
       'Нильсен',
@@ -36,14 +45,32 @@ export const productVariant1: Question[] = [
   {
     id: 4,
     component: (
-      <MonoQuestion content="Когнитивное искажение: пользователь видит «Было 9 990 ₽, стало 4 990 ₽» и воспринимает цену как выгодную. Как называется этот эффект?" />
+      <MonoQuestion
+        content={
+          <>
+            Когнитивное искажение: пользователь видит «Было 9 990 ₽, стало 4 990 ₽» и воспринимает
+            цену как выгодную. <br />
+            <br />
+            Как называется этот эффект?
+          </>
+        }
+      />
     ),
     correctAnswers: ['якорение', 'anchoring', 'эффект якоря', 'Якорение'],
   },
   {
     id: 5,
     component: (
-      <MonoQuestion content="Практика из Кремниевой долины, которую Google и Apple внедрили в офисах для фокусировки команд. Четыре буквы." />
+      <MonoQuestion
+        content={
+          <>
+            Практика из Кремниевой долины, которую Google и Apple внедрили в офисах для фокусировки
+            команд.
+            <br />
+            <br /> Четыре буквы.
+          </>
+        }
+      />
     ),
     correctAnswers: ['Йога'],
   },

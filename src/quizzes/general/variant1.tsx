@@ -12,12 +12,18 @@ export const generalVariant1: Question[] = [
     id: 1,
     component: (
       <SplitQuestion
+        rightImage
         left={
-          <div style={{ fontSize: '100px', width: '100%' }}>
-            Во вселенной «Матрицы» был персонаж-программа, который помогал другим программам
-            скрываться от удаления системой. Он любил контроль, причинно-следственные связи и
-            пафосные монологи. Как его звали?
-          </div>
+          <p style={{ fontSize: '70px' }}>
+            Во вселенной «Матрицы» был
+            <br /> персонаж-программа, который
+            <br /> помогал другим программам
+            <br /> скрываться от удаления системой.
+            <br />
+            <br /> Он любил контроль, причинно-следственные связи и пафосные монологи.
+            <br />
+            <br /> Как его звали?
+          </p>
         }
         right={<img src={human} alt="" />}
       />
@@ -27,7 +33,15 @@ export const generalVariant1: Question[] = [
   {
     id: 2,
     component: (
-      <MonoQuestion content="Стартап с оценкой больше $1 млрд. Какое мифическое существо стало его прозвищем?" />
+      <MonoQuestion
+        content={
+          <>
+            Стартап с оценкой больше $1 млрд.
+            <br />
+            Какое мифическое существо стало его прозвищем?
+          </>
+        }
+      />
     ),
     correctAnswers: ['Единорог', 'unicorn'],
   },
@@ -36,24 +50,17 @@ export const generalVariant1: Question[] = [
     component: (
       <MonoQuestion
         content={
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '60px',
-              textAlign: 'center',
-            }}
-          >
-            <div style={{ fontSize: '90px', maxWidth: '90%' }}>
-              Какой популярный мультфильм объединяет работы этих итальянских художников и пиццу?
-            </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <p>
+              Какой популярный мультфильм объединяет работы этих итальянских
+              <br /> художников и пиццу?
+            </p>
             <div
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                gap: '40px',
+                justifyContent: 'start',
+                gap: '48px',
               }}
             >
               <img src={arms} style={{ height: '504px', objectFit: 'contain' }} />
@@ -70,14 +77,33 @@ export const generalVariant1: Question[] = [
   {
     id: 4,
     component: (
-      <MonoQuestion content="Когда шторм разносит нас в разные стороны, есть то, что держит нас вместе и не даёт уплыть. В Точка Банке это слово обозначает главный «круг», в который входит главная команда лидеров. Что это?" />
+      <MonoQuestion
+        content={
+          <p style={{ textAlign: 'left' }}>
+            Когда шторм разносит нас в разные стороны, есть то, что держит нас
+            <br />
+            вместе и не даёт уплыть. В Точка Банке это слово обозначает главный «круг», в который
+            входит главная команда лидеров.
+            <br />
+            <br />
+            Что это?
+          </p>
+        }
+      />
     ),
     correctAnswers: ['якорь', 'Якорь', 'Якорный круг'],
   },
   {
     id: 5,
     component: (
-      <MonoQuestion content="Зелёный наставник из «Звёздных войн», чья фраза «Do or do not, there is no try» стала мантрой стартаперов?" />
+      <MonoQuestion
+        content={
+          <>
+            Зелёный наставник из «Звёздных войн»,
+            <br /> чья фраза «Do or do not, there is no try» стала мантрой стартаперов?
+          </>
+        }
+      />
     ),
     correctAnswers: ['Yoda', 'йода'],
   },
