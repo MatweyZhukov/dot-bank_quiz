@@ -2,13 +2,26 @@ import { type FC, useState } from 'react';
 import check from '../../assets/check.svg';
 import darts from '../../assets/darts.svg';
 import trophy from '../../assets/trophy.svg';
+import type { StreamKey } from '../../quizzes/types';
 import './SuccessQuestion.css';
 
 type Variant = 0 | 1 | 2;
 
+const getSuccessCursorKey = (stream?: StreamKey) =>
+  stream ? `success-variant-cursor-${stream}` : 'success-variant-cursor-default';
+
 const SuccessQuestion: FC = () => {
+  const stream = (history.state?.usr?.stream || undefined) as StreamKey | undefined;
+
   const [variant] = useState<Variant>(() => {
-    return Math.floor(Math.random() * 3) as Variant;
+    const key = getSuccessCursorKey(stream);
+
+    const current = Number(localStorage.getItem(key) || 0);
+    const next = ((current + 1) % 3) as Variant;
+
+    localStorage.setItem(key, String(next));
+
+    return next;
   });
 
   return (

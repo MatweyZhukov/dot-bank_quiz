@@ -16,11 +16,11 @@ export const frontendVariant2: Question[] = [
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              gap: '40px',
+              gap: '120px',
               width: '100%',
             }}
           >
-            <p>
+            <p style={{ lineHeight: 1, marginTop: '156px' }}>
               В 1998 году в шуточном RFC 2324
               <br /> описали протокол HTCPCP
               <br /> для управления кофеварками.
@@ -85,7 +85,8 @@ export const frontendVariant2: Question[] = [
         rightImage
         left={
           <p>
-            Какого названия не хватает на схеме?
+            Какого названия не хватает
+            <br /> на схеме?
             <br />
             <br /> Назови аналогом на русском.
           </p>

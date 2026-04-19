@@ -18,7 +18,8 @@ const Rules: FC = () => {
             <span className="rule-dot" />
             <p>
               5 вопросов, на каждый
-              <br /> по минуте
+              <br />
+              вопрос по минуте
             </p>
           </li>
 
@@ -30,9 +31,21 @@ const Rules: FC = () => {
             </p>
           </li>
 
+          {/* 🔥 ПОДСПИСОК */}
           <li className="rule-item">
             <span className="rule-dot" />
-            <p>Выберите стрим: бэкенд, фронтенд, продакт-менеджмент, дата-сайенс, общий</p>
+
+            <div className="rule-content">
+              <p>Выберите стрим:</p>
+
+              <ul className="rule-sublist">
+                <li>бэкенд</li>
+                <li>фронтенд</li>
+                <li>продакт-менеджмент</li>
+                <li>дата-сайенс</li>
+                <li>общий</li>
+              </ul>
+            </div>
           </li>
 
           <li className="rule-item">
