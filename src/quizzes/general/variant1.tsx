@@ -22,7 +22,7 @@ export const generalVariant1: Question[] = [
         right={<img src={human} alt="" />}
       />
     ),
-    correctAnswers: ['Merovingian', 'Merovingien', 'меровинг'],
+    correctAnswers: ['Merovingian', 'Merovingien', 'меровинг', 'Меровинген'],
   },
   {
     id: 2,
@@ -45,7 +45,6 @@ export const generalVariant1: Question[] = [
               textAlign: 'center',
             }}
           >
-            {/* текст */}
             <div style={{ fontSize: '90px', maxWidth: '90%' }}>
               Какой популярный мультфильм объединяет работы этих итальянских художников и пиццу?
             </div>
@@ -66,7 +65,7 @@ export const generalVariant1: Question[] = [
         }
       />
     ),
-    correctAnswers: ['черепашки нинзя', 'черепашки ниндзя', 'черепашки-нинзя'],
+    correctAnswers: ['черепашки нинзя', 'черепашки ниндзя', 'черепашки-нинзя', 'Черепашки-ниндзя'],
   },
   {
     id: 4,

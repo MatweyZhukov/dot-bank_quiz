@@ -1,9 +1,7 @@
-import { useEffect, type FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { StreamKey } from '../../quizzes/types';
 import './CodeWord.css';
-
-const letters = ['М', 'Е', 'Н', 'Я', 'Й'];
 
 const CodeWord: FC = () => {
   const location = useLocation();
@@ -12,32 +10,50 @@ const CodeWord: FC = () => {
   const results: boolean[] = location.state?.results || [];
   const stream = location.state?.stream as StreamKey | undefined;
 
-  const word = letters.map((letter, index) => (results[index] ? letter : '_')).join('');
+  const [showFullWord, setShowFullWord] = useState(false);
 
-  const isPerfect = results.length === 5 && results.every(Boolean);
+  const correctCount = results.filter(Boolean).length;
+
+  const maskedWord = ['М', 'Е', 'Н', 'Я', 'Й']
+    .map((letter, index) => (results[index] ? letter : '_'))
+    .join('');
 
   useEffect(() => {
     if (stream) {
       localStorage.removeItem(`quiz-${stream}`);
-      localStorage.removeItem(`quiz-timer-${stream}`);
+      localStorage.removeItem(`quiz-question-timer-${stream}`);
+      localStorage.removeItem(`quiz-question-index-${stream}`);
     }
 
-    const timer = setTimeout(() => {
-      navigate('/final');
+    const showWordTimer = setTimeout(() => {
+      setShowFullWord(true);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    const finalTimer = setTimeout(() => {
+      navigate('/final');
+    }, 10000);
+
+    return () => {
+      clearTimeout(showWordTimer);
+      clearTimeout(finalTimer);
+    };
   }, [navigate, stream]);
 
   return (
     <div className="code-wrapper">
       <div className="code-inner">
-        <h1 className="code-word">{word}</h1>
+        {!showFullWord ? (
+          <h1 className="code-word">{maskedWord}</h1>
+        ) : (
+          <>
+            <h1 className="code-word">МЕНЯЙ</h1>
 
-        {isPerfect && (
-          <div className={`code-badge ${isPerfect ? 'success' : 'partial'}`}>
-            <span className="code-badge-text">Идеально!</span>
-          </div>
+            {correctCount === 5 && (
+              <div className="code-badge success">
+                <span className="code-badge-text">Идеально!</span>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

@@ -13,26 +13,41 @@ export const backendVariant1: Question[] = [
         right={<img src={deer} alt="" />}
       />
     ),
-    correctAnswers: ['мониторинг', 'monitoring', 'monitoring system', 'elk', 'elk stack'],
+    correctAnswers: [
+      'мониторинг',
+      'monitoring',
+      'Monitoring',
+      'monitoring system',
+      'мониторингинг',
+      'монитроинг',
+      'монитринг',
+      'монитроринг',
+      'system monitoring',
+      'service monitoring',
+      'elk',
+      'elk стек',
+      'elk stack',
+      'Мониторинг',
+    ],
   },
   {
     id: 2,
     component: <MonoQuestion content={<img src={endpoints} alt="" />} />,
-    correctAnswers: ['эндпоинт', 'ендпоинт', 'endpoint', 'эндпоин'],
+    correctAnswers: ['Endpoint', 'эндпоинт', 'ендпоинт', 'endpoint', 'эндпоин'],
   },
   {
     id: 3,
     component: (
       <MonoQuestion content="Первая, вторая, третья форма... Я разбиваю одну толстую таблицу на несколько связанных, чтобы убить дублирование. Что за процесс?" />
     ),
-    correctAnswers: ['нормализация', 'normalization'],
+    correctAnswers: ['нормализация', 'normalization', 'Нормализация'],
   },
   {
     id: 4,
     component: (
       <MonoQuestion content="Отступы — его пунктуация. Табы — его враг. Один лишний пробел — и ничего не работает. Docker-compose и Kubernetes без этого не живут. Что это?" />
     ),
-    correctAnswers: ['yaml', 'Y A M L', 'y a m l', 'Y a m l', 'YML', 'yamal', 'ямл'],
+    correctAnswers: ['YAML', 'yaml', 'Y A M L', 'y a m l', 'Y a m l', 'YML', 'yamal', 'ямл'],
   },
   {
     id: 5,
@@ -69,6 +84,7 @@ export const backendVariant1: Question[] = [
       'trace',
       'tracing system',
       'трассировка',
+      'Трейсинг',
     ],
   },
 ];

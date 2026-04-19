@@ -18,7 +18,7 @@ export const backendVariant3: Question[] = [
         right={<img src={code} alt="" />}
       />
     ),
-    correctAnswers: ['мок', 'moc', 'Moc', 'mok', 'Mok', 'MOK', 'mock', 'заглушка', 'моки'],
+    correctAnswers: ['мок', 'moc', 'Moc', 'mok', 'Mok', 'MOK', 'mock', 'заглушка', 'моки', 'Мок'],
   },
   {
     id: 2,
@@ -34,6 +34,7 @@ export const backendVariant3: Question[] = [
       />
     ),
     correctAnswers: [
+      'Дедлок (deadlock)',
       'дэдлок',
       'дедлок',
       'dedlock',
@@ -49,7 +50,7 @@ export const backendVariant3: Question[] = [
   {
     id: 3,
     component: <MonoQuestion content="Billion dollar mistake. Что это?" />,
-    correctAnswers: ['nul', 'Nul', 'zero', 'null', 'NULL'],
+    correctAnswers: ['nul', 'Nul', 'zero', 'null', 'NULL', 'Null'],
   },
   {
     id: 4,
@@ -63,6 +64,7 @@ export const backendVariant3: Question[] = [
               alignItems: 'center',
               gap: '60px',
               fontSize: '120px',
+              textAlign: 'center',
             }}
           >
             <div
@@ -78,6 +80,7 @@ export const backendVariant3: Question[] = [
               <span>→</span>
               <span>📖</span>
             </div>
+
             <div
               style={{
                 display: 'flex',
@@ -89,11 +92,20 @@ export const backendVariant3: Question[] = [
               <span>↓</span>
               <span>📖</span>
             </div>
+            <div
+              style={{
+                fontSize: '90px',
+                lineHeight: 1.2,
+              }}
+            >
+              Один пишет, остальные копируют. Процесс копирования называется…
+            </div>
           </div>
         }
       />
     ),
     correctAnswers: [
+      'Репликация',
       'репликация',
       'репликацией',
       'Репликацией',
@@ -112,6 +124,7 @@ export const backendVariant3: Question[] = [
       />
     ),
     correctAnswers: [
+      'Фреймворк',
       'фреймворк',
       'framework',
       'Framework',

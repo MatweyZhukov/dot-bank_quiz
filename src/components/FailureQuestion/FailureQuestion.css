@@ -1,0 +1,51 @@
+.failure-wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 0 200px;
+  display: flex;
+  align-items: center;
+  background-color: #7f42e1;
+}
+
+.failure-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.failure-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 153px;
+}
+
+.failure-big {
+  font-size: 650px;
+  line-height: 0.8;
+  color: #ffffff;
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  text-transform: uppercase;
+}
+
+.failure-subtitle {
+  font-size: 325px;
+  line-height: 1;
+  color: #ffffff;
+  font-family: 'ABC Gravity Compressed Cyrillic', sans-serif;
+  text-transform: uppercase;
+}
+
+.failure-image {
+  position: absolute;
+  right: -200px;
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.failure-image.is-shifted {
+  transform: translateY(-30%);
+}
