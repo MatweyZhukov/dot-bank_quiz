@@ -18,7 +18,12 @@ const Home: FC = () => {
         <img className="sub-image reshat" src={reshat} alt="Reshat" />
       </div>
 
-      <Button onClick={() => navigate('/rules')} width="1072px" height="216px" borderRadius="100px">
+      <Button
+        onClick={() => navigate('/register')}
+        width="1072px"
+        height="216px"
+        borderRadius="100px"
+      >
         Начать
       </Button>
     </div>

@@ -1,4 +1,4 @@
-import deer from '../../assets/deer.svg';
+import deer from '../../assets/deer.png';
 import endpoints from '../../assets/endpoints.svg';
 import MonoQuestion from '../../components/MonoQuestion';
 import SplitQuestion from '../../components/SplitQuestion';

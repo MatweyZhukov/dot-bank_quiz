@@ -1,5 +1,5 @@
 import code from '../../assets/code.svg';
-import spidermen from '../../assets/spidermen.svg';
+import spidermen from '../../assets/spidermen.png';
 import MonoQuestion from '../../components/MonoQuestion';
 import SplitQuestion from '../../components/SplitQuestion';
 import type { Question } from '../types';

@@ -32,10 +32,10 @@ const Quiz: FC = () => {
 
   const { progress, setProgress, reset } = useQuizProgress(stream as StreamKey);
 
-  const [screen, setScreen] = useState<ScreenState>('question');
-  const [timeLeft, setTimeLeft] = useState(60);
-  const [userAnswer, setUserAnswer] = useState('');
+  const [timeLeft, setTimeLeft] = useState<number>(60);
+  const [userAnswer, setUserAnswer] = useState<string>('');
   const [result, setResult] = useState<Result | null>(null);
+  const [screen, setScreen] = useState<ScreenState>('question');
 
   const quizVariant = useMemo(() => {
     if (!stream) return null;
@@ -65,11 +65,7 @@ const Quiz: FC = () => {
         localStorage.setItem(key, String(current + 1));
 
         reset();
-
-        navigate('/code-word', {
-          state: { results: updatedResults, stream },
-        });
-
+        navigate('/code-word', { state: { results: updatedResults, stream } });
         return;
       }
 
@@ -88,7 +84,6 @@ const Quiz: FC = () => {
   };
 
   useEffect(() => {
-    return;
     if (!quizVariant || screen !== 'question') return;
 
     if (!localStorage.getItem(TIMER_KEY!)) createTimer(TIMER_KEY);
@@ -106,7 +101,7 @@ const Quiz: FC = () => {
     }, 250);
 
     return () => clearInterval(interval);
-  }, [screen]);
+  }, [screen, quizVariant]);
 
   const handleAnswerSubmit = () => {
     if (!userAnswer.trim() || !currentQuestion) return;
