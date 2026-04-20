@@ -1,7 +1,7 @@
-import computers from '../../assets/computers.svg';
+import computers from '../../assets/computers.png';
 import dots from '../../assets/dots.svg';
 import formula from '../../assets/formula.svg';
-import historyman from '../../assets/historyman.svg';
+import historyman from '../../assets/historyman.png';
 import pleasantmem from '../../assets/pleasantmem.svg';
 import SplitQuestion from '../../components/SplitQuestion';
 import type { Question } from '../types';

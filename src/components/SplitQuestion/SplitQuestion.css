@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 45px;
   width: 100%;
+  height: 100%;
+  min-height: 0;
 }
 
 .split-wrapper-vertical {
@@ -10,6 +12,8 @@
   flex-direction: column;
   gap: 33px;
   width: 100%;
+  height: 100%;
+  min-height: 0;
 }
 
 .split-cell {
@@ -22,12 +26,14 @@
 }
 
 .split-wrapper .split-cell {
-  height: 1127px;
+  height: 100%;
+  min-height: 0;
   padding: 156px 124px;
 }
 
 .split-wrapper-vertical .split-cell {
   height: auto;
+  min-height: 0;
   padding: 80px 124px;
 }
 
@@ -45,12 +51,14 @@
   display: flex;
   align-items: stretch;
   justify-content: stretch;
+  height: 100%;
 }
 
 .split-cell--image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 

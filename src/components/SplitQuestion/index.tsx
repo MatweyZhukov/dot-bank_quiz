@@ -7,7 +7,6 @@ type Props = {
   rightImage?: boolean;
   paddingRight?: string;
   direction?: 'horizontal' | 'vertical';
-
   noPadding?: 'left' | 'right' | 'both';
 };
 

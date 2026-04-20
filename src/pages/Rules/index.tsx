@@ -31,19 +31,18 @@ const Rules: FC = () => {
             </p>
           </li>
 
-          {/* 🔥 ПОДСПИСОК */}
           <li className="rule-item">
             <span className="rule-dot" />
 
             <div className="rule-content">
-              <p>Выберите стрим:</p>
+              <p>Выбери стрим:</p>
 
               <ul className="rule-sublist">
-                <li>бэкенд</li>
-                <li>фронтенд</li>
-                <li>продакт-менеджмент</li>
-                <li>дата-сайенс</li>
-                <li>общий</li>
+                <li>Бэкенд</li>
+                <li>Фронтенд</li>
+                <li>Продакт-менеджмент</li>
+                <li>Дата-сайенс</li>
+                <li>Общий</li>
               </ul>
             </div>
           </li>

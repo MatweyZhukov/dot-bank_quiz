@@ -12,9 +12,16 @@ const CodeWord: FC = () => {
   const results: boolean[] = location.state?.results || [];
   const stream = location.state?.stream as StreamKey | undefined;
 
-  const [reveal, setReveal] = useState(false);
+  const [guess, setGuess] = useState<string>('');
+  const [reveal, setReveal] = useState<boolean>(false);
+  const [showBadge, setShowBadge] = useState<boolean>(false);
+  const [guessError, setGuessError] = useState<boolean>(false);
+  const [guessedCorrectly, setGuessedCorrectly] = useState<boolean>(false);
 
   const correctCount = results.filter(Boolean).length;
+
+  const isPerfect = correctCount === WORD.length;
+  const isPartial = correctCount > 0 && correctCount < WORD.length;
 
   useEffect(() => {
     if (stream) {
@@ -23,14 +30,52 @@ const CodeWord: FC = () => {
       localStorage.removeItem(`quiz-question-index-${stream}`);
     }
 
-    const letterTimer = setTimeout(() => setReveal(true), 3000);
-    const redirectTimer = setTimeout(() => navigate('/final'), 8000);
+    if (!isPartial) {
+      const revealTimer = setTimeout(() => setReveal(true), 3000);
 
-    return () => {
-      clearTimeout(letterTimer);
-      clearTimeout(redirectTimer);
-    };
-  }, [stream, navigate]);
+      const badgeTimer = setTimeout(() => {
+        if (isPerfect) setShowBadge(true);
+      }, 4000);
+
+      const redirectTimer = setTimeout(() => {
+        navigate('/final');
+      }, 8000);
+
+      return () => {
+        clearTimeout(revealTimer);
+        clearTimeout(badgeTimer);
+        clearTimeout(redirectTimer);
+      };
+    }
+  }, [stream, navigate, isPartial, isPerfect]);
+
+  const handleGuess = () => {
+    const normalize = (word: string) => word.toLowerCase().trim();
+    const correctWord = WORD.join('').toLowerCase();
+
+    if (normalize(guess) === correctWord) {
+      setGuess('');
+      setGuessedCorrectly(true);
+      setReveal(true);
+
+      setTimeout(() => {
+        setShowBadge(true);
+      }, 2500);
+
+      setTimeout(() => {
+        navigate('/final');
+      }, 4500);
+    } else {
+      setGuessError(true);
+
+      setTimeout(() => {
+        setGuessError(false);
+        setReveal(true);
+      }, 1000);
+
+      setTimeout(() => navigate('/final'), 5000);
+    }
+  };
 
   return (
     <div className="code-wrapper">
@@ -41,15 +86,12 @@ const CodeWord: FC = () => {
 
             return (
               <span key={i} className="code-slot">
-                {/* 🔥 фикс ширины */}
                 <span className="code-measure">{letter}</span>
 
-                {/* базовый слой */}
                 <span className={`code-base ${!isCorrect && reveal ? 'code-base--hide' : ''}`}>
                   {isCorrect ? letter : '_'}
                 </span>
 
-                {/* анимируемая буква */}
                 {!isCorrect && (
                   <span
                     className={`code-reveal ${reveal ? 'show' : ''}`}
@@ -63,8 +105,33 @@ const CodeWord: FC = () => {
           })}
         </h1>
 
-        {correctCount === 5 && reveal && (
-          <div className="code-badge code-badge--visible" style={{ animationDelay: '0.8s' }}>
+        {isPartial && !reveal && !showBadge && (
+          <form
+            className="guess-block"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleGuess();
+            }}
+          >
+            <h1 className="guess-title">ЕСТЬ ДОГАДКИ, ЧТО ЗА СЛОВО?</h1>
+
+            <div className="guess-input-row">
+              <input
+                value={guess}
+                onChange={(e) => setGuess(e.target.value)}
+                className={`guess-input ${guessError ? 'error' : ''}`}
+                autoFocus
+              />
+
+              <button type="submit" className="guess-button">
+                Попробовать
+              </button>
+            </div>
+          </form>
+        )}
+
+        {showBadge && (isPerfect || guessedCorrectly) && (
+          <div className="code-badge code-badge--visible">
             <span className="code-badge-text">Идеально!</span>
           </div>
         )}
