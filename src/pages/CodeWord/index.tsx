@@ -53,6 +53,8 @@ const CodeWord: FC = () => {
     const normalize = (word: string) => word.toLowerCase().trim();
     const correctWord = WORD.join('').toLowerCase();
 
+    if (!guess.trim()) return;
+
     if (normalize(guess) === correctWord) {
       setGuess('');
       setGuessedCorrectly(true);
@@ -80,7 +82,7 @@ const CodeWord: FC = () => {
   return (
     <div className="code-wrapper">
       <div className="code-inner">
-        <h1 className="code-word">
+        <h1 className={`code-word ${guessError ? 'error' : ''}`}>
           {WORD.map((letter, i) => {
             const isCorrect = results[i];
 
@@ -119,7 +121,7 @@ const CodeWord: FC = () => {
               <input
                 value={guess}
                 onChange={(e) => setGuess(e.target.value)}
-                className={`guess-input ${guessError ? 'error' : ''}`}
+                className="guess-input"
                 autoFocus
               />
 
