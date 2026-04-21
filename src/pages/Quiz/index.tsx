@@ -84,6 +84,7 @@ const Quiz: FC = () => {
   };
 
   useEffect(() => {
+    return;
     if (!quizVariant || screen !== 'question') return;
 
     if (!localStorage.getItem(TIMER_KEY!)) createTimer(TIMER_KEY);
