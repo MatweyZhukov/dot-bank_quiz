@@ -29,7 +29,7 @@ export const generalVariant1: Question[] = [
         right={<img src={human} alt="" />}
       />
     ),
-    correctAnswers: ['Merovingian', 'Merovingien', 'меровинг', 'Меровинген'],
+    correctAnswers: ['Merovingian', 'Merovingien', 'меровинг', 'Меровинген', 'Мировинген'],
   },
   {
     id: 2,
@@ -73,7 +73,13 @@ export const generalVariant1: Question[] = [
         }
       />
     ),
-    correctAnswers: ['черепашки нинзя', 'черепашки ниндзя', 'черепашки-нинзя', 'Черепашки-ниндзя'],
+    correctAnswers: [
+      'черепашки нинзя',
+      'черепашки ниндзя',
+      'черепашки-нинзя',
+      'Черепашки-ниндзя',
+      'ниндзя',
+    ],
   },
   {
     id: 4,

@@ -58,7 +58,7 @@ export const dataVariant2: Question[] = [
                 width: '850px',
                 height: '269px',
                 background: '#7f42e1',
-                top: '67%',
+                top: '60%',
                 left: '470px',
                 transform: 'translate(-50%, -50%)',
                 borderRadius: '40px',
