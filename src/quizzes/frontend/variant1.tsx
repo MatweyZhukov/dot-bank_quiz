@@ -105,14 +105,12 @@ export const frontendVariant1: Question[] = [
       />
     ),
     correctAnswers: [
-      'Строгий режим (use strict / strict mode)',
-      'use strict / strict mode',
       'строгий режим js',
       'режим strict',
       'js',
       'strict mode',
-      'strict mode',
       'строгий режим',
+      'Строгий режим',
       'use strict',
     ],
   },
